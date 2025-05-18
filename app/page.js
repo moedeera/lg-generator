@@ -51,9 +51,12 @@ const teams = [
 
 export default function Home() {
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold mb-4">League Standings</h1>
-      <TeamStatsTable teams={teams} />
+    <div className="main-container">
+      <div className="p-4 border border-black ">
+        {" "}
+        <h1 className="text-xl font-bold mb-4">League Standings</h1>
+        <TeamStatsTable teams={teams} />
+      </div>
     </div>
   );
 }
