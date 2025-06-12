@@ -10,7 +10,7 @@ import {
 
 export default function ConferenceStandings({ data }) {
   return (
-    <div className="space-y-10 p-6 grid lg:grid-cols-2 gap-2">
+    <div className="space-y-10 p-6 grid lg:grid-cols-2">
       {Object.entries(data).map(([conference, groups]) => {
         // Combine all teams in the conference with division info
         let combinedTeams = [];
@@ -33,14 +33,14 @@ export default function ConferenceStandings({ data }) {
         combinedTeams.sort((a, b) => b.record.wins - a.record.wins);
 
         return (
-          <Card key={conference} className="bg-slate-400">
+          <Card key={conference} className="bg-slate-400 mr-2">
             <CardContent className="p-0 ">
               <h2 className="text-2xl font-bold mb-4 px-6 pt-6 ">
                 {conference}
               </h2>
               <Table className="bg-slate-500 text-white rounded-md overflow-hidden">
                 <TableHeader>
-                  <TableRow>
+                  <TableRow className="bg-slate-700">
                     <TableHead className="text-white">#</TableHead>
                     <TableHead className="text-white">Team</TableHead>
                     <TableHead className="text-white">Division</TableHead>

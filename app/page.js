@@ -1,6 +1,8 @@
 "use client"; // if using in Next.js app directory
 
+import BracketGrid from "./components/Bracket/Bracket";
 import ConferenceStandings from "./components/ConferenceStandings/ConferenceStandings";
+import PlayoffBracket from "./components/PlayoffBracket/PlayoffBracket";
 import StandingsTables from "./components/StandingsTable/StandingsTable";
 import TeamStatsTable from "./components/Table/TeamStatsTable";
 const teamData = {
@@ -66,6 +68,106 @@ const teamData = {
   },
 };
 
+const bracket = {
+  round1: [
+    {
+      conf: "east",
+      teams: ["Milwaukee", "Cleveland"],
+      seeds: [1, 8],
+      result: [4, 2],
+    },
+    {
+      conf: "east",
+      teams: ["Toronto", "New York"],
+      seeds: [4, 5],
+      result: [4, 2],
+    },
+    {
+      conf: "east",
+      teams: ["Indiana", "Brooklyn"],
+      seeds: [3, 6],
+      result: [4, 2],
+    },
+    {
+      conf: "east",
+      teams: ["Philadelphia", "Miami"],
+      seeds: [2, 7],
+      result: [4, 2],
+    },
+
+    { conf: "west", teams: ["Dallas", "Utah"], seeds: [1, 8], result: [4, 2] },
+    {
+      conf: "west",
+      teams: ["Denver", "Portland"],
+      seeds: [4, 5],
+      result: [4, 2],
+    },
+    {
+      conf: "west",
+      teams: ["Golden State", "San Antonio"],
+      seeds: [3, 6],
+      result: [4, 2],
+    },
+    {
+      conf: "west",
+      teams: ["Los Angeles's C", "Houston"],
+      seeds: [2, 7],
+      result: [4, 2],
+    },
+  ],
+
+  round2: [
+    {
+      conf: "east",
+      teams: ["Milwaukee", "Toronto"],
+      seeds: [1, 4],
+      result: [4, 2],
+    },
+    {
+      conf: "east",
+      teams: ["Philadelphia", "Indiana"],
+      seeds: [2, 3],
+      result: [4, 3],
+    },
+    {
+      conf: "west",
+      teams: ["Dallas", "Denver"],
+      seeds: [1, 4],
+      result: [4, 2],
+    },
+    {
+      conf: "west",
+      teams: ["Los Angeles's C", "Golden State"],
+      seeds: [2, 3],
+      result: [3, 4],
+    },
+  ],
+
+  round3: [
+    {
+      conf: "east",
+      teams: ["Milwaukee", "Philadelphia"],
+      seeds: [1, 2],
+      result: [4, 2],
+    },
+    {
+      conf: "west",
+      teams: ["Dallas", "Golden State"],
+      seeds: [1, 3],
+      result: [4, 2],
+    },
+  ],
+
+  finals: [
+    {
+      conf: "finals",
+      teams: ["Milwaukee", "Dallas"],
+      seeds: [1, 1],
+      result: [4, 3],
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <div className="main-container">
@@ -75,6 +177,8 @@ export default function Home() {
         <TeamStatsTable />
         <StandingsTables data={teamData} />
         <ConferenceStandings data={teamData} />
+        {/* <PlayoffBracket /> */}
+        <BracketGrid bracket={bracket} />
       </div>
     </div>
   );
