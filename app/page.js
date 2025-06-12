@@ -1,5 +1,6 @@
 "use client"; // if using in Next.js app directory
 
+import ConferenceStandings from "./components/ConferenceStandings/ConferenceStandings";
 import StandingsTables from "./components/StandingsTable/StandingsTable";
 import TeamStatsTable from "./components/Table/TeamStatsTable";
 const teamData = {
@@ -73,6 +74,7 @@ export default function Home() {
         <h1 className="text-xl font-bold mb-4 text-white">League Standings</h1>
         <TeamStatsTable />
         <StandingsTables data={teamData} />
+        <ConferenceStandings data={teamData} />
       </div>
     </div>
   );
