@@ -58,13 +58,13 @@ export default function BracketGrid({ bracket }) {
         </div>
 
         {/* Round 2 */}
-        <div className="flex flex-col my-auto  gap-18">
+        <div className="flex flex-col my-auto  gap-24">
           <div>{renderColumn(round2.east, "East R2")}</div>
           <div>{renderColumn(round2.west, "West R2")}</div>
         </div>
 
         {/* Round 3 */}
-        <div className="flex flex-col my-auto justify-center gap-20">
+        <div className="flex flex-col my-auto justify-center gap-44">
           <div>{renderColumn(round3.east, "East Finals")}</div>
           <div>{renderColumn(round3.west, "West Finals")}</div>
         </div>

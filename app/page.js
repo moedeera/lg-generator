@@ -100,7 +100,7 @@ const bracket = {
       conf: "west",
       teams: ["Denver", "Portland"],
       seeds: [4, 5],
-      result: [4, 2],
+      result: [2, 4],
     },
     {
       conf: "west",
@@ -131,8 +131,8 @@ const bracket = {
     },
     {
       conf: "west",
-      teams: ["Dallas", "Denver"],
-      seeds: [1, 4],
+      teams: ["Dallas", "Portland"],
+      seeds: [1, 5],
       result: [4, 2],
     },
     {
