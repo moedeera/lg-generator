@@ -10,10 +10,10 @@ import {
 
 export default function StandingsTables({ data }) {
   return (
-    <div className="space-y-10 p-6">
+    <div className="space-y-10 p-6 text-xs">
       {Object.entries(data).map(([conference, groups]) => (
         <div key={conference}>
-          <h2 className="text-2xl font-bold mb-6 text-white">{conference}</h2>
+          <h2 className="text-sm font-bold mb-6 text-white">{conference}</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {Object.entries(groups).map(([group, teams]) => {
               const sortedTeams = [...teams].sort(
@@ -23,7 +23,7 @@ export default function StandingsTables({ data }) {
               return (
                 <Card key={group} className="bg-slate-500">
                   <CardContent className="p-4">
-                    <h3 className="text-xl font-semibold mb-4">{group}</h3>
+                    <h3 className="text-sm font-semibold mb-4">{group}</h3>
                     <Table>
                       <TableHeader>
                         <TableRow>

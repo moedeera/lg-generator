@@ -174,7 +174,7 @@ export default function Home() {
       <div className="p-4  ">
         {" "}
         <h1 className="text-xl font-bold mb-4 text-white">League Standings</h1>
-        <TeamStatsTable />
+        {/* <TeamStatsTable /> */}
         <StandingsTables data={teamData} />
         <ConferenceStandings data={teamData} />
         {/* <PlayoffBracket /> */}
