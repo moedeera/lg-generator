@@ -29,7 +29,7 @@ export default function BracketGrid({ bracket }) {
 
   const renderColumn = (matches = [], label = "") => (
     <div className="flex flex-col items-center gap-3 ">
-      {label && <h4 className="text-xs font-semibold ">{label}</h4>}
+      {label && <h4 className="text-xs font-semibold text-white">{label}</h4>}
       {matches.map((match, idx) => (
         <div key={idx}>{renderMatch(match)}</div>
       ))}

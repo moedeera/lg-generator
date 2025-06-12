@@ -74,7 +74,7 @@ const bracket = {
       conf: "east",
       teams: ["Milwaukee", "Cleveland"],
       seeds: [1, 8],
-      result: [4, 2],
+      result: [4, 0],
     },
     {
       conf: "east",
@@ -86,7 +86,7 @@ const bracket = {
       conf: "east",
       teams: ["Indiana", "Brooklyn"],
       seeds: [3, 6],
-      result: [4, 2],
+      result: [4, 1],
     },
     {
       conf: "east",
@@ -121,7 +121,7 @@ const bracket = {
       conf: "east",
       teams: ["Milwaukee", "Toronto"],
       seeds: [1, 4],
-      result: [4, 2],
+      result: [4, 0],
     },
     {
       conf: "east",
@@ -154,7 +154,7 @@ const bracket = {
       conf: "west",
       teams: ["Dallas", "Golden State"],
       seeds: [1, 3],
-      result: [4, 2],
+      result: [4, 1],
     },
   ],
 
