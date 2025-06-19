@@ -6,6 +6,7 @@ import ConferenceStandings from "./components/ConferenceStandings/ConferenceStan
 import PlayoffBracket from "./components/PlayoffBracket/PlayoffBracket";
 import StandingsTables from "./components/StandingsTable/StandingsTable";
 import TeamStatsTable from "./components/Table/TeamStatsTable";
+import StandingsView from "./components/StandingsView/StandingsView";
 
 export default function Home() {
   return (
@@ -13,9 +14,8 @@ export default function Home() {
       <div className="p-4  ">
         {" "}
         <h1 className="text-xl font-bold mb-4 text-white">League Standings</h1>
+        <StandingsView />
         {/* <TeamStatsTable /> */}
-        <StandingsTables data={teamData} />
-        <ConferenceStandings data={teamData} />
         {/* <PlayoffBracket /> */}
         <BracketGrid bracket={bracket} />
       </div>
