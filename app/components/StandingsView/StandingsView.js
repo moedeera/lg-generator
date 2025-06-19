@@ -10,7 +10,7 @@ function StandingsView() {
   const views = ["Overview", "Divisions", "Conference", "Both", "Playoffs"];
   return (
     <div>
-      <div className="cursor-pointer text-white border border-white flex flex-wrap py-4 justify-evenly">
+      <div className="cursor-pointer text-white border border-white flex flex-cols gap-4 md:flex-rows flex-wrap py-4 justify-evenly">
         {views.map((type, index) => (
           <div
             key={index}
