@@ -3,10 +3,11 @@ import { bracket, teamData } from "@/assets/info";
 import React, { useState } from "react";
 import StandingsTables from "../StandingsTable/StandingsTable";
 import ConferenceStandings from "../ConferenceStandings/ConferenceStandings";
+import BracketGrid from "../Bracket/Bracket";
 
 function StandingsView() {
   const [view, setView] = useState("Divisions");
-  const views = ["Divisions", "Conference", "Both", "Playoffs"];
+  const views = ["Overview", "Divisions", "Conference", "Both", "Playoffs"];
   return (
     <div>
       <div className="cursor-pointer text-white border border-white flex flex-wrap py-4 justify-evenly">
@@ -33,6 +34,7 @@ function StandingsView() {
         {(view === "Conference" || view === "Both") && (
           <ConferenceStandings data={teamData} />
         )}
+        {view == "Playoffs" && <BracketGrid bracket={bracket} />}
       </div>
     </div>
   );

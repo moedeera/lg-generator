@@ -17,7 +17,6 @@ export default function Home() {
         <StandingsView />
         {/* <TeamStatsTable /> */}
         {/* <PlayoffBracket /> */}
-        <BracketGrid bracket={bracket} />
       </div>
     </div>
   );
