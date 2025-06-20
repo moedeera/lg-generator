@@ -21,11 +21,11 @@ export default function StandingsTables({ data }) {
               );
 
               return (
-                <Card key={group} className="bg-slate-500">
+                <Card key={group} className="bg-slate-400">
                   <CardContent className="p-4">
                     <h3 className="text-sm font-semibold mb-4">{group}</h3>
                     <Table>
-                      <TableHeader>
+                      <TableHeader className="text-xs">
                         <TableRow>
                           <TableHead>Team</TableHead>
                           <TableHead>Wins</TableHead>
@@ -34,7 +34,7 @@ export default function StandingsTables({ data }) {
                       </TableHeader>
                       <TableBody>
                         {sortedTeams.map((team) => (
-                          <TableRow key={team.name}>
+                          <TableRow key={team.name} className="text-xs">
                             <TableCell>{team.name}</TableCell>
                             <TableCell>{team.record.wins}</TableCell>
                             <TableCell>{team.record.losses}</TableCell>

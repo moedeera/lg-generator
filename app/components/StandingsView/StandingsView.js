@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import StandingsTables from "../StandingsTable/StandingsTable";
 import ConferenceStandings from "../ConferenceStandings/ConferenceStandings";
 import BracketGrid from "../Bracket/Bracket";
+import OverviewSection from "../OverviewSection/OverviewSection";
 
 function StandingsView() {
   const [view, setView] = useState("Divisions");
@@ -28,6 +29,7 @@ function StandingsView() {
         ))}
       </div>
       <div className="">
+        {view === "Overview" && <OverviewSection season={"season"} />}
         {(view === "Divisions" || view === "Both") && (
           <StandingsTables data={teamData} />
         )}
