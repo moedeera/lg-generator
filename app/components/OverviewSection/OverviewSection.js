@@ -5,7 +5,7 @@ import LeadingScorers from "./LeadingScorers";
 // ---------- Mock Regular Season Data ----------
 const divisions = [
   {
-    name: "Atlantic Conference",
+    name: "Eastern Conference",
     teams: [
       { seed: 1, name: "River City Raptors", wins: 58, losses: 24 },
       { seed: 2, name: "Lakeview Lynx", wins: 52, losses: 30 },
@@ -20,7 +20,7 @@ const divisions = [
     ],
   },
   {
-    name: "Pacific Conference",
+    name: "Western Conference",
     teams: [
       { seed: 1, name: "Desert Scorpions", wins: 60, losses: 22 },
       { seed: 2, name: "Mountain Mustangs", wins: 54, losses: 28 },
