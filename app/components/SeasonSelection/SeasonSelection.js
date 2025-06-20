@@ -1,8 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import { GlobalContext } from "../../context/GlobalContext";
+import React, { useContext, useState } from "react";
 
 function SeasonSelection() {
   const [season, setSeason] = useState("2024-25");
+  //   console.log(test);
   const seasons = [
     "2024-25",
     "2023-24",
@@ -18,7 +20,7 @@ function SeasonSelection() {
   return (
     <div className="w-4/5 mx-auto mb-4 bg-gray-400">
       <div className="cursor-pointer text-white border border-white flex flex-cols gap-4 md:flex-rows flex-wrap py-4 justify-evenly">
-        {seasons.map((year, index) => (
+        {seasons?.map((year, index) => (
           <div
             key={index}
             onClick={() => {
