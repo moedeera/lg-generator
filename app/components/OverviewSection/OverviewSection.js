@@ -43,7 +43,7 @@ const bracket = {
       { matchup: "Raptors (1) vs Hawks (4)", result: "4–1" },
       { matchup: "Lynx (2) vs Monarchs (3)", result: "4–2" },
     ],
-    finals: [{ matchup: "Raptors vs Lynx", result: "4–3" }],
+    finals: [{ matchup: "(1) Raptors vs Lynx (2)", result: "4–3" }],
     champion: "River City Raptors",
   },
   west: {
@@ -51,7 +51,7 @@ const bracket = {
       { matchup: "Scorpions (1) vs Stallions (4)", result: "3–4" },
       { matchup: "Mustangs (2) vs Cyclones (3)", result: "4–0" },
     ],
-    finals: [{ matchup: "Mustangs vs Stallions", result: "2–4" }],
+    finals: [{ matchup: "(2) Mustangs vs Stallions (4)", result: "2–4" }],
     champion: "Seaside Stallions",
   },
   finals: {
@@ -93,7 +93,7 @@ const BracketColumn = ({ title, series }) => (
         key={i}
         className="p-4 border rounded-lg shadow hover:shadow-lg transition text-center bg-slate-400"
       >
-        <p className="font-medium leading-tight">{s.matchup}</p>
+        <p className="font-medium leading-tight text-sm">{s.matchup}</p>
         <p className="text-sm text-gray-900">{s.result}</p>
       </div>
     ))}
