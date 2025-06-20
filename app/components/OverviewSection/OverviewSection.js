@@ -86,15 +86,15 @@ const StandingsTable = ({ teams }) => (
 );
 
 const BracketColumn = ({ title, series }) => (
-  <div className="flex flex-col gap-4">
-    <h3 className="text-lg font-semibold text-center">{title}</h3>
+  <div className="flex flex-col gap-4 ">
+    <h3 className="text-lg font-semibold text-center text-white">{title}</h3>
     {series.map((s, i) => (
       <div
         key={i}
-        className="p-4 border rounded-lg shadow hover:shadow-lg transition text-center"
+        className="p-4 border rounded-lg shadow hover:shadow-lg transition text-center bg-slate-400"
       >
         <p className="font-medium leading-tight">{s.matchup}</p>
-        <p className="text-sm text-gray-500">{s.result}</p>
+        <p className="text-sm text-gray-900">{s.result}</p>
       </div>
     ))}
   </div>
@@ -106,38 +106,24 @@ export default function SeasonOverview() {
     <div className="container mx-auto p-4 space-y-12">
       {/* Header */}
       <header className="text-center space-y-2">
-        <h1 className="text-3xl font-bold text-white">
-          2025 National Elite Basketball League
-        </h1>
+        <h1 className="text-3xl font-bold text-white">2025 Season</h1>
         <p className="text-gray-200">Season Overview &amp; Playoff Results</p>
       </header>
 
-      {/* Regular Season Standings */}
-      <section>
-        <h2 className="text-2xl text-white font-semibold mb-4">
-          Regular Season Standings
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {divisions.map((d) => (
-            <div key={d.name}>
-              <h3 className="text-xl text-white font-semibold mb-2">
-                {d.name}
-              </h3>
-              <StandingsTable teams={d.teams} />
-            </div>
-          ))}
-          <div>
-            <h3 className="text-xl text-white font-semibold mb-2">
-              Leading Scorers
-            </h3>{" "}
-            <LeadingScorers />
-          </div>
-        </div>
-      </section>
-
       {/* Playoff Bracket */}
       <section>
-        <h2 className="text-2xl font-semibold mb-8">Playoff Bracket</h2>
+        {/* League Finals */}
+        <div className="mt-12 text-center text-white">
+          <h3 className="text-xl font-semibold">Finals</h3>
+          <p className="text-lg mt-2">{bracket.finals.matchup}</p>
+          <p className="text-2xl font-bold">{bracket.finals.result}</p>
+          <p className="mt-4 text-2xl font-extrabold">
+            Champion: {bracket.finals.champion}
+          </p>
+        </div>
+        <h2 className="text-2xl font-semibold mb-8 text-white">
+          Playoff Bracket
+        </h2>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
           {/* East Bracket */}
           <div className="flex flex-col lg:flex-row gap-8 items-center">
@@ -168,15 +154,28 @@ export default function SeasonOverview() {
             />
           </div>
         </div>
+      </section>
 
-        {/* League Finals */}
-        <div className="mt-12 text-center">
-          <h3 className="text-xl font-semibold">League Finals</h3>
-          <p className="text-lg mt-2">{bracket.finals.matchup}</p>
-          <p className="text-2xl font-bold">{bracket.finals.result}</p>
-          <p className="mt-4 text-2xl font-extrabold">
-            Champion: {bracket.finals.champion}
-          </p>
+      {/* Regular Season Standings */}
+      <section>
+        <h2 className="text-2xl text-white font-semibold mb-4">
+          Regular Season Standings
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {divisions.map((d) => (
+            <div key={d.name}>
+              <h3 className="text-xl text-white font-semibold mb-2">
+                {d.name}
+              </h3>
+              <StandingsTable teams={d.teams} />
+            </div>
+          ))}
+          <div>
+            <h3 className="text-xl text-white font-semibold mb-2">
+              Leading Scorers
+            </h3>{" "}
+            <LeadingScorers />
+          </div>
         </div>
       </section>
     </div>

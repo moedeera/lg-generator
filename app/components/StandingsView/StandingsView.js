@@ -8,7 +8,7 @@ import OverviewSection from "../OverviewSection/OverviewSection";
 
 function StandingsView() {
   const [view, setView] = useState("Divisions");
-  const views = ["Overview", "Divisions", "Conference", "Both", "Playoffs"];
+  const views = ["Overview", "Divisions", "Conference", "Stats", "Playoffs"];
   return (
     <div>
       <div className="cursor-pointer text-white border border-white flex flex-cols gap-4 md:flex-rows flex-wrap py-4 justify-evenly">

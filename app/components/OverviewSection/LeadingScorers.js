@@ -2,16 +2,16 @@ import React from "react";
 
 function LeadingScorers() {
   const topScorers = [
-    { name: "Jalen Storm", team: "Mountain Mustangs", ppg: 29.7 },
-    { name: "Tyrone Blaze", team: "River City Raptors", ppg: 28.9 },
-    { name: "Eli Thunder", team: "Desert Scorpions", ppg: 27.5 },
-    { name: "Marcus Vale", team: "Metro Monarchs", ppg: 26.2 },
-    { name: "Zion Quest", team: "Lakeview Lynx", ppg: 25.6 },
-    { name: "Devon Ridge", team: "Canyon Cyclones", ppg: 24.8 },
-    { name: "Andre Peaks", team: "Seaside Stallions", ppg: 24.1 },
-    { name: "Chris Volt", team: "Harbor Hawks", ppg: 23.9 },
-    { name: "Nico Frost", team: "Prairie Pythons", ppg: 23.4 },
-    { name: "Tariq Moon", team: "Tundra Thunder", ppg: 22.7 },
+    { name: "Darren Thompson", team: "Mountain Mustangs", ppg: 35.7 },
+    { name: "Joel Embid", team: "River City Raptors", ppg: 34.1 },
+    { name: "Luka Doncic", team: "Desert Scorpions", ppg: 32.5 },
+    { name: "Giannis Antetokoumpo", team: "Metro Monarchs", ppg: 31.1 },
+    { name: "Nikola Jokic", team: "Lakeview Lynx", ppg: 30.6 },
+    { name: "Stefon Anderson", team: "Canyon Cyclones", ppg: 30.1 },
+    { name: "Patrick Donnelley", team: "Seaside Stallions", ppg: 28.8 },
+    { name: "Jayson Tatum", team: "Harbor Hawks", ppg: 27.9 },
+    { name: "Kevin Durant", team: "Prairie Pythons", ppg: 27.1 },
+    { name: "LeBron James", team: "Tundra Thunder", ppg: 26.1 },
   ];
   const ScorersTable = ({ scorers }) => (
     <table className="w-full text-left border-collapse bg-amber-200 text-sm">
