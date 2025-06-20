@@ -7,13 +7,17 @@ import PlayoffBracket from "./components/PlayoffBracket/PlayoffBracket";
 import StandingsTables from "./components/StandingsTable/StandingsTable";
 import TeamStatsTable from "./components/Table/TeamStatsTable";
 import StandingsView from "./components/StandingsView/StandingsView";
+import SeasonSelection from "./components/SeasonSelection/SeasonSelection";
 
 export default function Home() {
   return (
     <div className="main-container">
       <div className="p-4  ">
         {" "}
-        <h1 className="text-xl font-bold mb-4 text-white">League Standings</h1>
+        <h1 className="text-xl font-bold mb-4 text-white text-center">
+          League Archives
+        </h1>
+        <SeasonSelection />
         <StandingsView />
         {/* <TeamStatsTable /> */}
         {/* <PlayoffBracket /> */}
